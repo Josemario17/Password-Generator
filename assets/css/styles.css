@@ -1,0 +1,50 @@
+@font-face {
+  font-family: font_1;
+  src: url("../css/font/Outfit-Regular.ttf");
+  font-weight: 300;
+  font-size: 18px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: font_1;
+}
+
+body {
+  max-width: 1200px;
+  min-width: 750px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: hsl(211, 100%, 6%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media (max-width: 900px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+}
+
+.container {
+  width: 50%;
+  height: 100%;
+  background-color: "";
+  padding: 4%;
+  border-radius: 12px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .container {
+    margin: 0 50px;
+  }
+}/*# sourceMappingURL=styles.css.map */
