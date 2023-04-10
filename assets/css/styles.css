@@ -9,6 +9,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: font_1;
+  color: honeydew;
 }
 
 body {
@@ -33,7 +34,12 @@ body {
 .container {
   width: 50%;
   height: 100%;
-  background-color: "";
+  background: rgba(0, 227, 91, 0.237);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.055);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 4%;
   border-radius: 12px;
   margin: 0 auto;
@@ -47,4 +53,169 @@ body {
   .container {
     margin: 0 50px;
   }
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+button .icon-btn {
+  width: 6px;
+}
+
+label {
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+}
+label .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+}
+label .icon::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 128, 87);
+  margin-left: 2px;
+  top: 1.5px;
+  border-radius: 50%;
+}
+label .icon:hover {
+  opacity: 70%;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]:checked + label .icon {
+  background-color: rgba(0, 227, 91, 0.237);
+}
+input[type=checkbox]:checked + label .icon::before {
+  margin-left: 25.9px;
+  top: 1.5px;
+  background-color: whitesmoke;
+}
+
+:is(header, main, footer) {
+  width: 90%;
+  height: 100%;
+  margin: 3% auto;
+}
+
+:is(label, input, span) {
+  transition: 0.4s ease-in-out;
+}
+
+header p {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.section, .section .section__element {
+  width: 100%;
+  margin: 3% auto;
+}
+.section .section__element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:is(.section, .section .section__element, footer) .is-input-area-g input[type=range] {
+  width: 50%;
+}
+:is(.section, .section .section__element, footer) .is-input-area-g input[disabled] {
+  width: 90%;
+  height: 48px;
+  margin: 1% auto 5%;
+  padding-left: 43px;
+  font-size: 20px;
+  background-color: hsla(212, 97%, 12%, 0.303);
+  border: 0;
+  border-radius: 8px;
+}
+:is(.section, .section .section__element, footer) .is-input-area-g button {
+  position: absolute;
+  top: 26%;
+  right: -34%;
+  color: rgba(128, 128, 128, 0.626);
+  transition: 0.4s ease-in-out;
+}
+:is(.section, .section .section__element, footer) .is-input-area-g button:hover {
+  color: whitesmoke;
+}
+
+.section .is-input-area-g {
+  margin: 8% auto 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .is-input-area-g {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+footer .is-color-area {
+  width: 90%;
+  margin: 3% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+footer .is-color-area span {
+  display: inline;
+  width: 45px;
+  height: 10px;
+  box-shadow: "rgba(110, 110, 110, 0.064) 0px 3px 6px, rgba(123, 120, 120, 0.027) 0px 3px 6px";
+}
+footer .is-color-area span.strong {
+  margin-right: 10px;
+}
+
+.less-1 {
+  background-color: hsla(212, 97%, 12%, 0.303);
+}
+
+.middle {
+  background-color: hsla(212, 100%, 5%, 0.518);
+}
+
+.strong {
+  background-color: hsla(212, 100%, 5%, 0.785);
+}
+
+.footer__element {
+  width: 100%;
+}
+.footer__element .footer__element--btn {
+  width: 90%;
+  height: 48px;
+  background-color: hsl(211, 100%, 30%);
+  margin: 8% auto 1%;
+  border-radius: 8px;
+  box-shadow: "rgba(110, 110, 110, 0.064) 0px 3px 6px, rgba(123, 120, 120, 0.027) 0px 3px 6px";
+  gap: 15px;
+  transition: 0.3s ease-in-out;
+}
+.footer__element .footer__element--btn:hover {
+  background-color: hsl(211, 96%, 34%);
 }/*# sourceMappingURL=styles.css.map */

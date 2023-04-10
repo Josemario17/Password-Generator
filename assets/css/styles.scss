@@ -1,6 +1,14 @@
 $shadow: "rgba(110, 110, 110, 0.064) 0px 3px 6px, rgba(123, 120, 120, 0.027) 0px 3px 6px";
+
 $screen: "max-width: 900px";
-$glassmorfism: "";
+@mixin glassmorfism{
+    background: rgba(0, 227, 91, 0.237);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.055);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 @mixin center($align, $justify){
     display: flex;
@@ -21,6 +29,7 @@ $glassmorfism: "";
     margin: 0;
     box-sizing: border-box;
     font-family: font_1;
+    color: honeydew;
 }
 
 body{
@@ -39,7 +48,7 @@ body{
 .container{
     width: 50%;
     height: 100%;
-    background-color: $glassmorfism;
+    @include glassmorfism();
     padding: 4%;
     border-radius: 12px;
     margin: 0 auto;
@@ -52,5 +61,176 @@ body{
     }
 }
 
+button{
+    background-color: transparent;
+    border: 0;
+    @include center(center, center);
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+
+    .icon-btn{
+        width: 6px;
+    }
+}
+
+label{
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    
+    .icon{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: whitesmoke;
+        border-radius: 30px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(0, 128, 87);
+            margin-left: 2px;
+            top: 1.5px;
+            border-radius: 50%;
+        }
+
+        &:hover{
+            opacity: 70%;
+        }
+    }
+
+}
+
+input[type="checkbox"]{
+    display: none;
+
+    &:checked + label .icon{
+        background-color: rgba(0, 227, 91, 0.237);
+        &::before{
+            margin-left: 25.9px;
+            top: 1.5px;
+            background-color: whitesmoke;
+        }
+    }
+}
+
+:is(header, main, footer){
+    width: 90%;
+    height: 100%;
+    margin: 3% auto;
+}
+
+:is(label, input, span){
+    transition: .4s ease-in-out;
+}
+
+header p{
+    text-align: center;
+    font-size: xx-large;
+}
+
+.section{
+    width: 100%;
+    margin: 3% auto;
+    
+    .section__element{
+        @extend .section;
+        @include center(center, space-between);
+    }
+}
 
 
+:is(.section, footer) .is-input-area-g{
+    input[type="range"]{
+        width: 50%;
+    }
+
+    input[disabled]{
+        width: 90%;
+        height: 48px;
+        margin: 1% auto 5%;
+        padding-left: 43px;
+        font-size: 20px;
+        background-color: hsla(212, 97%, 12%, 0.303);
+        border: 0;
+        border-radius: 8px;
+    }
+
+    button{
+        position: absolute;
+        top: 26%;
+        right: -34%;
+        color: rgba(128, 128, 128, 0.626);
+        transition: .4s ease-in-out;
+
+        &:hover{
+            color: whitesmoke;
+        }
+    }
+}
+
+.section .is-input-area-g{
+    margin: 8% auto 3%;
+    @include center(center, space-between);
+}
+
+footer .is-input-area-g{
+    @include center(center, center);
+    flex-direction: column;
+    position: relative;
+}
+
+footer .is-color-area{
+    width: 90%;
+    margin: 3% auto;
+    @include center(center, center);
+    gap: 10px;
+
+    span{
+        display: inline;
+        width: 45px;
+        height: 10px;
+        box-shadow: $shadow;
+        &.strong{        
+            margin-right: 10px;
+        }
+    }
+}
+
+
+.less-1{
+    background-color: hsla(212, 97%, 12%, 0.303);
+}
+
+.middle{
+    background-color: hsla(212, 100%, 5%, 0.518);
+}
+
+.strong{
+    background-color: hsla(212, 100%, 5%, 0.785);
+}
+
+
+.footer__element{
+    width: 100%;
+
+    .footer__element--btn{
+        width: 90%;
+        height: 48px;
+        background-color: hsl(211, 100%, 30%);
+        margin: 8% auto 1%;
+        border-radius: 8px;
+        box-shadow: $shadow;
+        gap: 15px;
+        transition: .3s ease-in-out;
+
+        &:hover{
+            background-color: hsl(211, 96%, 34%);
+        }
+    }
+}

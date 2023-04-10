@@ -13,59 +13,58 @@
             <p>Password - Generator</p>
         </header>
         <main>
-            <section>
-                <button><span>Options</span><img src="" alt="down-bar"></button>
-            </section>
-
-            <section>
-                <div>
-                    <span>Mixed Letters [A-Z]</span>
-                    <label for=""><span></span></label>
-                    <input type="checkbox" name="" id="">
+            <section class="section">
+                <div class="section__element">
+                    <span class="section__element--text-inside">Mixed Letters [A-Z]</span>
+                    <input type="checkbox" name="t-check" id="t-check-1">
+                    <label for="t-check-1" class="section__element--toggle"><span class="icon"></span></label>
                 </div>
 
-                <div>
-                    <span>Digits (0-9)</span>
-                    <label for=""></label>
-                    <input type="checkbox" name="" id="">
+                <div class="section__element">
+                    <span class="section__element--text-inside">Digits (0-9)</span>
+                    <input type="checkbox" name="t-check" id="t-check-2">
+                    <label for="t-check-2"><span class="icon"></span></label>
                 </div>
 
-                <div>
-                    <span>Other Characters «"!#$%&/()"» </span>
-                    <label for=""></label>
-                    <input type="checkbox" name="" id="">
+                <div class="section__element">
+                    <span class="section__element--text-inside">Other Characters «"!#$%&/()"» </span>
+                    <input type="checkbox" name="t-check" id="t-check-3">
+                    <label for="t-check-3" class="section__element--toggle"><span class="icon"></span></label>
                 </div>
 
-                <div>
-                    <span>Password Length: +10</span>
-                    <label for=""></label>
-                    <input type="checkbox" name="" id="">
+                <div class="section__element">
+                    <span class="section__element--text-inside">Password Length: +10</span>
+                    <input type="checkbox" name="t-check" id="t-check-4">
+                    <label for="t-check-4" class="section__element--toggle"><span class="icon"></span></label>
                 </div>
             </section>
 
-            <section>
-                <div>
-                    <span>easy</span>
-                    <input type="range" name="" id="" min="0" max="100" step="25">
-                    <span>stronger</span>
+            <section class="section">
+                <div class="section__element is-input-area-g">
+                    <span class="section__element--lateral-text">easy</span>
+                    <input type="range" name="" id="" min="0" max="100" step="25" value="0">
+                    <span class="section__element--lateral-text">stronger</span>
                 </div>
             </section>
         </main>
+
         <footer>
-            <div>
-                <input type="hidden" name="">
+            <div class="footer__element  is-input-area-g">
+                <input type="text" name="t-textinpt" placeholder="Password" disabled>
                 <button>copy me</button>
             </div>
-            <div>
-                <span>Status</span>
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="footer__element is-color-area">
+                <span>Easy</span>
+                <span class="less-1"></span>
+                <span class="middle"></span>
+                <span class="strong"></span>
+                <span>Strong</span>
             </div>
-            <div>
-                <button>Gerar <img src="" alt="icon-generator"></button>
+            <div class="footer__element">
+                <button class="footer__element--btn">Gerar <img src="assets/imagens/" alt="icon-generator"></button>
             </div>
         </footer>
     </div>
 </body>
+<script src="assets/js/basics.js"></script>
 </html>
