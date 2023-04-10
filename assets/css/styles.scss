@@ -99,6 +99,10 @@ label{
             border-radius: 50%;
         }
 
+        &:last-child{
+            top: 1.4px;
+        }
+
         &:hover{
             opacity: 70%;
         }
@@ -156,7 +160,6 @@ header p{
         margin: 1% auto 5%;
         padding-left: 43px;
         font-size: 20px;
-        background-color: hsla(212, 97%, 12%, 0.303);
         border: 0;
         border-radius: 8px;
     }
@@ -212,7 +215,7 @@ footer .is-color-area{
 }
 
 .strong{
-    background-color: hsla(212, 100%, 5%, 0.785);
+    background-color: hsl(213, 100%, 9%);
 }
 
 
@@ -227,10 +230,12 @@ footer .is-color-area{
         border-radius: 8px;
         box-shadow: $shadow;
         gap: 15px;
+        font-size: larger;
         transition: .3s ease-in-out;
 
         &:hover{
             background-color: hsl(211, 96%, 34%);
         }
     }
+    
 }

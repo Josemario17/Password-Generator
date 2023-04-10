@@ -93,6 +93,9 @@ label .icon::before {
   top: 1.5px;
   border-radius: 50%;
 }
+label .icon:last-child {
+  top: 1.4px;
+}
 label .icon:hover {
   opacity: 70%;
 }
@@ -143,7 +146,6 @@ header p {
   margin: 1% auto 5%;
   padding-left: 43px;
   font-size: 20px;
-  background-color: hsla(212, 97%, 12%, 0.303);
   border: 0;
   border-radius: 8px;
 }
@@ -200,7 +202,7 @@ footer .is-color-area span.strong {
 }
 
 .strong {
-  background-color: hsla(212, 100%, 5%, 0.785);
+  background-color: hsl(213, 100%, 9%);
 }
 
 .footer__element {
@@ -214,6 +216,7 @@ footer .is-color-area span.strong {
   border-radius: 8px;
   box-shadow: "rgba(110, 110, 110, 0.064) 0px 3px 6px, rgba(123, 120, 120, 0.027) 0px 3px 6px";
   gap: 15px;
+  font-size: larger;
   transition: 0.3s ease-in-out;
 }
 .footer__element .footer__element--btn:hover {
